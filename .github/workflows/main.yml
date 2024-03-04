@@ -21,4 +21,3 @@ jobs:
           script: | 
             cd /var/www/html/Laravel-demo
             git pull origin ${{ github.ref }}
-  
