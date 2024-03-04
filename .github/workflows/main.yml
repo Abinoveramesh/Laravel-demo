@@ -1,14 +1,14 @@
-name: CICD
+name: CICD 
 
 on:
   push:
-    branches: [ development ]  # Update to the correct branch name
+    branches: [ main ]  # Update to the correct branch name
 
 jobs:
   deploy:
     name: Deploy 
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/development'
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v2
       
@@ -21,6 +21,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: | 
             cd /var/www/html/project
-            git pull origin development  # Pull the correct branch (development)
+            git pull origin main  # Pull the correct branch (development)
             composer install
             # Add any additional commands here
