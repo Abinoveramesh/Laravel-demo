@@ -22,5 +22,4 @@ jobs:
           script: | 
             cd /var/www/html/Laravel-demo
             git pull origin main  # Pull the correct branch (main)
-           
             # Add any additional commands here
