@@ -19,4 +19,4 @@ jobs:
           php-version: '8.0'
 
       - name: Start Laravel Server
-        run: php artisan serve --host=0.0.0.0
+        run: php artisan serve 
