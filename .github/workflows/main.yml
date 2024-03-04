@@ -13,11 +13,7 @@ jobs:
 
       - name: Deploy to development server
         uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: ${{ secrets.PORT }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+        
           
           script: | 
             cd /var/www/html/Laravel-demo
