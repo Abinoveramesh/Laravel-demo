@@ -13,7 +13,7 @@ jobs:
 
       - name: Deploy to development server
         uses: appleboy/ssh-action@master    
-          with:
+         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
