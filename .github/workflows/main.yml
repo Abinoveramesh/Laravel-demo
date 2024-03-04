@@ -2,7 +2,7 @@ name: CICD
 
 on:
   push:
-    branches: [ Branch ]
+    branches: [ development ]  # Update to the correct branch name
 
 jobs:
   deploy:
@@ -22,7 +22,7 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: | 
-           cd /var/www/html/project
-           git pull origin branch
-           composer install
-           ##add commands
+            cd /var/www/html/project
+            git pull origin development  # Pull the correct branch (development)
+            composer install
+            # Add any additional commands here
