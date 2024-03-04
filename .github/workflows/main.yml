@@ -11,9 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Composer install
-        run: composer install
-
       - name: Deploy to development server
         uses: appleboy/ssh-action@master
         with:
@@ -22,7 +19,6 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: | 
-            cd /var/www/html/project
+            cd /var/www/html/Laravel-demo
             git pull origin ${{ github.ref }}
-            composer install
             ## Add additional commands here
