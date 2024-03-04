@@ -19,7 +19,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: | 
             cd /var/www/html/Laravel-demo
             git pull origin main  # Pull the correct branch (main)
